@@ -24,6 +24,11 @@ const routes = [
     name: 'main-page',
     component: () => import('../views/MainPage.vue'),
   },
+  {
+    path: '/card-info',
+    name: 'card-info',
+    component: () => import('../views/CardInfo.vue'),
+  },
 ]
 
 const router = new VueRouter({

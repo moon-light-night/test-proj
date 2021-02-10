@@ -1,0 +1,51 @@
+@import '../Plugins/variables.scss';
+@import '../Plugins/mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.__payment {
+  height: 144px;
+}
+.content__payment {
+  position: absolute;
+  height: 978px;
+  width: $width-content;
+  top: 0;
+  background: $newBackgroundColor;
+  z-index: -200;
+}
+.footer__payment {
+  position: absolute;
+  top: 806px;
+  width: $width-content;
+  z-index: 300;
+}
+.btn__payment {
+  width: 335px;
+  height: 50px;
+  position: absolute;
+  border-radius: 5px;
+  top: 721px;
+  left: 20px;
+}
+.card__payment {
+  position: absolute;
+  top: 261px;
+  left: 57px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.addCard__payment {
+  @include text__payment;
+  width: 335px;
+  left: 20px;
+  top: 732px;
+}
+.footer-rectangle {
+  width: $width-content;
+  position: absolute;
+  top: 883px;
+  height: 95px;
+  background: white;
+  z-index: 500;
+}

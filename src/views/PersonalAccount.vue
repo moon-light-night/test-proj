@@ -7,6 +7,7 @@
     <p class="user-name-text">Мария Маракова</p>
     <p class="phone-number">+7 (911) 715-58-67</p>
     <img
+      @click="$router.push('/main-page')"
       class="close-account-button"
       src="@/profile/PersonalAccount/images/close.png"
     />
@@ -22,35 +23,35 @@
       <!-- hh -->
       <div class="item item-1">
         <img src="@/profile/PersonalAccount/images/star1.svg" class="icon" />
-        <p>Услуги</p>
+        <p><a href="#">Услуги</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
       <!-- hh -->
       <div class="item item-2">
         <img src="@/profile/PersonalAccount/images/folder1.svg" class="icon" />
-        <p>Документы</p>
+        <p><a href="#">Документы</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
       <!-- hh -->
       <div class="item item-3">
         <img src="@/profile/PersonalAccount/images/payment1.svg" class="icon" />
-        <p>Оплата</p>
+        <p><a href="#">Оплата</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
       <!-- hh -->
       <div class="item item-4">
         <img src="@/profile/PersonalAccount/images/inbox1.svg" class="icon" />
-        <p>Сообщения</p>
+        <p><a href="#">Сообщения</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
       <!-- hh -->
       <div class="item item-5">
         <img src="@/profile/PersonalAccount/images/tasks1.svg" class="icon" />
-        <p>Уведомления</p>
+        <p><a href="#">Уведомления</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
@@ -60,7 +61,7 @@
           src="@/profile/PersonalAccount/images/settings1.svg"
           class="icon"
         />
-        <p>Настройки</p>
+        <p><a href="#">Настройки</a></p>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
       <!-- hh -->
@@ -68,7 +69,7 @@
         class="logout-icon"
         src="@/profile/PersonalAccount/images/lock1.svg"
       />
-      <p class="logout">Выйти</p>
+      <p class="logout"><a @click="$router.push('/main-page')">Выйти</a></p>
       <img class="footer" src="@/profile/PersonalAccount/images/footer.png" />
     </div>
   </v-app>

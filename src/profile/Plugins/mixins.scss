@@ -37,3 +37,13 @@
   width: 315px;
   border-top: 2px solid rgba(0, 0, 0, 0.25);
 }
+@mixin text__payment {
+  font-family: $main-font;
+  position: absolute;
+  font-size: $fsz__payment;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: #020266;
+}
