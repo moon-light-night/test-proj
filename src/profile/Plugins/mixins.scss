@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+@mixin main-text {
+  position: absolute;
+  font: {
+    family: $main-font;
+    weight: normal;
+    size: $fsz-content;
+  }
+  letter-spacing: -0.24px;
+  color: $white;
+}
+@mixin content-text {
+  position: absolute;
+  font: {
+    family: $main-font;
+    weight: normal;
+    size: $fsz-content;
+  }
+  letter-spacing: 0.15px;
+  line-height: 24px;
+  color: $white;
+}
+@mixin svg {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+@mixin arrow {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  color: $white;
+}
+@mixin line {
+  position: absolute;
+  width: 315px;
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
+}

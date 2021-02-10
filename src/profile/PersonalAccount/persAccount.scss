@@ -1,8 +1,9 @@
 @import '../Plugins/variables.scss';
+@import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 /*first page*/
-#nav {
+.nav {
   height: 95px;
   width: $width-content;
   position: absolute;
@@ -10,16 +11,16 @@
   right: 0%;
   top: 0%;
   bottom: 21.79%;
-  background: url('~@/profile/PersonalAccount/131212008_144294664130776_3406834389164427514_n2.png');
+  background: url('~@/profile/PersonalAccount/images/131212008_144294664130776_3406834389164427514_n2.png');
 }
-#emty-field {
+.emty-field {
   position: absolute;
   top: 95px;
   width: $width-content;
   height: 72px;
   background: rgba(196, 196, 196, 0.57);
 }
-#person {
+.person {
   height: 461px;
   width: $width-content;
   position: absolute;
@@ -29,7 +30,7 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: -100;
 }
-#avatar {
+.avatar {
   height: 100px;
   width: 100px;
   position: absolute;
@@ -38,33 +39,23 @@
   top: 209px;
   bottom: 70.23%;
 }
-#user-name-text {
-  position: absolute;
-  font-family: $main-font;
-  font-weight: 500;
-  font-size: 18px;
+.user-name-text {
+  @include main-text;
   line-height: 20px;
   height: 20px;
   width: 161px;
   left: 107px;
   top: 329px;
-  letter-spacing: -0.24px;
   text-align: center;
-  color: $white;
 }
-#phone-number {
-  position: absolute;
+.phone-number {
+  @include main-text;
   height: 20px;
   left: 131px;
   top: 354px;
-  font-family: $main-font;
-  font-weight: normal;
-  font-size: $fsz-content;
-  letter-spacing: -0.24px;
   text-align: center;
-  color: $white;
 }
-#line {
+.line {
   position: absolute;
   width: 335px;
   height: 0px;
@@ -72,39 +63,187 @@
   top: 404.5px;
   border-top: 1px solid rgba(52, 142, 255, 0.5);
 }
-#close-account-button {
-  position: absolute;
-  height: 14px;
-  width: 14px;
+.close-account-button {
+  @include arrow;
   left: 31px;
   top: 194px;
-  color: $white;
 }
 .personal-info {
   p {
+    @include main-text;
     height: 22px;
     width: 210px;
     left: 60px;
     top: 422px;
-    position: absolute;
-    font-family: $main-font;
-    font-weight: normal;
-    font-size: $fsz-content;
-    letter-spacing: -0.24px;
-    color: $white;
   }
   img {
-    position: absolute;
-    height: 12.63px;
-    width: 7.42px;
+    @include arrow;
     left: 338.58px;
     top: 426.46px;
   }
-  #svg {
-    position: absolute;
+  .svg {
+    @include svg;
     top: 418px;
     left: 20px;
-    width: 30px;
-    height: 30px;
+  }
+}
+.content {
+  background: $newBackgroundColor;
+  height: 1038px;
+  width: $width-content;
+  position: absolute;
+  top: 0%;
+  z-index: -150;
+  .line {
+    position: absolute;
+    width: $width-content;
+    top: 480px;
+    left: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.25);
+    z-index: 200;
+  }
+  .logout {
+    @include content-text;
+    top: 884px;
+    left: 60px;
+  }
+  .logout-icon {
+    @include svg;
+    left: 20px;
+    top: 881px;
+  }
+  .footer {
+    position: absolute;
+    // width: $width-content;
+    bottom: 0;
+    z-index: 300;
+  }
+}
+.list {
+  background: $newBackgroundColor;
+  position: absolute;
+  height: 360px;
+  width: $width-content;
+  left: 0px;
+  top: 481px;
+}
+
+/**/
+.item {
+  .icon {
+    @include svg;
+  }
+  p {
+    @include content-text;
+  }
+  .arrow {
+    @include arrow;
+  }
+  span {
+    @include line;
+  }
+}
+.item-1 {
+  .icon {
+    left: 20px;
+    top: 496px;
+  }
+  p {
+    left: 60px;
+    top: 499px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 504.46px;
+  }
+  span {
+    top: 541px;
+    left: 60px;
+  }
+}
+.item-2 {
+  .icon {
+    left: 20px;
+    top: 556px;
+  }
+  p {
+    left: 60px;
+    top: 619px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 564.5px;
+  }
+  span {
+    top: 601px;
+    left: 60px;
+  }
+}
+.item-3 {
+  .icon {
+    left: 20px;
+    top: 616px;
+  }
+  p {
+    left: 60px;
+    top: 559px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 624px;
+  }
+  span {
+    top: 661px;
+    left: 60px;
+  }
+}
+.item-4 {
+  .icon {
+    left: 20px;
+    top: 676.2px;
+  }
+  p {
+    left: 60px;
+    top: 679px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 684.5px;
+  }
+  span {
+    top: 721px;
+    left: 60px;
+  }
+}
+.item-5 {
+  .icon {
+    left: 20px;
+    top: 736px;
+  }
+  p {
+    left: 60px;
+    top: 742px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 744.5px;
+  }
+  span {
+    top: 781px;
+    left: 60px;
+  }
+}
+.item-6 {
+  .icon {
+    left: 20px;
+    top: 796px;
+  }
+  p {
+    left: 60px;
+    top: 799px;
+  }
+  .arrow {
+    left: 338.6px;
+    top: 804.5px;
   }
 }
