@@ -20,6 +20,11 @@ const routes = [
     component: () => import('../views/AddNewCard.vue'),
   },
   {
+    path: '/new-card-num',
+    name: 'new-card-num',
+    component: () => import('../views/AddNewCard-num.vue'),
+  },
+  {
     path: '/main-page',
     name: 'main-page',
     component: () => import('../views/MainPage.vue'),

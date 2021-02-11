@@ -27,6 +27,7 @@
       :disabled="!$v.cardField.required"
       :class="{ invalid: !$v.cardField.required }"
       class="btn-continue"
+      @click="passCardName"
     >
       Продолжить
     </button>
@@ -70,7 +71,11 @@ export default {
   validations: {
     cardField: { required },
   },
-  mounted() {},
+  methods: {
+    passCardName() {
+      this.$store.dispatch('actionCardName', this.cardField)
+    },
+  },
   watch: {
     cardField: function() {
       if (this.cardField === 'Master card') {
