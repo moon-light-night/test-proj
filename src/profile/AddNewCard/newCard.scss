@@ -9,11 +9,52 @@
   left: 0;
   background: $newBackgroundColor;
 }
-.card-position {
-  position: absolute;
-  top: 258px;
-  left: 20px;
-}
+
+// .card-position {
+//   position: absolute;
+//   top: 258px;
+//   left: 20px;
+// }
+// .card-wifi {
+//   position: absolute;
+//   top: 339px;
+//   left: 318px;
+// }
+// .card-chip {
+//   position: absolute;
+//   top: 332px;
+//   left: 40px;
+// }
+// .mmyy {
+//   position: absolute;
+//   top: 416px;
+//   left: 40px;
+//   font-family: $main-font;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 24px;
+//   letter-spacing: 0.15px;
+//   color: white;
+// }
+// .nameCard {
+//   position: absolute;
+//   top: 283px;
+//   left: 40px;
+//   font-family: $main-font;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 14px;
+//   line-height: 24px;
+//   letter-spacing: 0.15px;
+//   color: white;
+// }
+// .card-stars {
+//   position: absolute;
+//   top: 385px;
+//   left: 38px;
+// }
+
 .field {
   position: absolute;
   top: 510px;
@@ -89,4 +130,79 @@
   top: 101%;
   left: 0;
   z-index: 1000;
+}
+.logo {
+  position: absolute;
+  z-index: 500;
+  top: 423px;
+  right: 47px;
+}
+.logo-cb {
+  position: absolute;
+  z-index: 500;
+  top: 280px;
+  left: 40px;
+}
+.logo-bank {
+  position: absolute;
+  z-index: 500;
+  top: 285px;
+  left: 106px;
+}
+.logo-line {
+  position: absolute;
+  z-index: 500;
+  top: 285px;
+  left: 94px;
+}
+
+.nameCard {
+  position: absolute;
+  top: 270px;
+  left: 40px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+  z-index: 10;
+}
+.card-position {
+  position: absolute;
+  top: 258px;
+  left: 20px;
+  z-index: 1;
+}
+.card-wifi {
+  position: absolute;
+  top: 339px;
+  left: 318px;
+  z-index: 10;
+}
+.card-chip {
+  position: absolute;
+  top: 332px;
+  left: 40px;
+  z-index: 10;
+}
+.mmyy {
+  position: absolute;
+  top: 416px;
+  left: 40px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+  z-index: 10;
+}
+.card-stars {
+  position: absolute;
+  top: 385px;
+  left: 38px;
+  z-index: 10;
 }
