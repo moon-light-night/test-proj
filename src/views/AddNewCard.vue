@@ -1,10 +1,10 @@
 <template>
-  <v-app>
+  <div>
     <div class="main-back"></div>
     <div class="nav"></div>
     <div class="emty-field __payment"></div>
     <img class="card-position" src="@/profile/AddNewCard/images/defCard.svg" />
-    <v-row>
+    <!-- <v-row>
       <v-textarea label="helper" value="lorem5dfd"></v-textarea>
     </v-row>
     <v-input
@@ -14,8 +14,8 @@
       disabled
     >
       Inputfdfffffffffsvd
-    </v-input>
-  </v-app>
+    </v-input> -->
+  </div>
 </template>
 
 <script>

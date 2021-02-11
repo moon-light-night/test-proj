@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <div class="nav"></div>
     <div class="emty-field"></div>
     <div class="person"></div>
@@ -72,7 +72,7 @@
       <p class="logout"><a @click="$router.push('/main-page')">Выйти</a></p>
       <img class="footer" src="@/profile/PersonalAccount/images/footer.png" />
     </div>
-  </v-app>
+  </div>
 </template>
 
 <script>
