@@ -206,3 +206,57 @@
   left: 38px;
   z-index: 10;
 }
+.card-stars__num {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+}
+
+.blackStripe {
+  position: absolute;
+  top: 288px;
+  left: 20px;
+  z-index: 10;
+}
+.whiteStripe {
+  position: absolute;
+  top: 360px;
+  left: 37px;
+  z-index: 10;
+}
+.recSVG {
+  position: absolute;
+  top: 372px;
+  left: 276px;
+  z-index: 10;
+}
+.firSecName {
+  position: absolute;
+  top: 427px;
+  left: 37px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  color: white;
+  z-index: 10;
+  margin: 0;
+}
+.recSVG-text {
+  position: absolute;
+  top: 370px;
+  left: 283px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  z-index: 10;
+  margin: 0;
+}

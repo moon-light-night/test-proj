@@ -43,6 +43,9 @@
   left: 20px;
   top: 732px;
   margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .footer-rectangle {
   width: $width-content;
@@ -52,4 +55,27 @@
   left: 0;
   background: white;
   z-index: 500;
+}
+.ul {
+  display: flex;
+  li {
+    list-style-type: none;
+  }
+}
+.secondCard {
+  position: absolute;
+  top: 261px;
+  left: 309px;
+  &:hover {
+    cursor: pointer;
+  }
+  z-index: 200;
+}
+.card__paymentAfterAdding {
+  position: absolute;
+  top: 261px;
+  left: 20px !important;
+  &:hover {
+    cursor: pointer;
+  }
 }

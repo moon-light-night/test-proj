@@ -9,7 +9,7 @@
     />
     <img class="card-wifi" src="@/profile/AddNewCard/images/wifi.svg" />
     <img class="card-chip" src="@/profile/AddNewCard/images/chip.svg" />
-    <p class="card-stars">{{ cardNum }}</p>
+    <p class="card-stars card-stars__num">{{ cardNum }}</p>
     <p class="mmyy">мм / yy</p>
     <fieldset class="field">
       <legend>Номер карты</legend>
@@ -21,9 +21,10 @@
       />
     </fieldset>
     <button
-      :disabled="!$v.cardField.required"
-      :class="{ invalid: !$v.cardField.required }"
+      :disabled="!$v.cardNum.required"
+      :class="{ invalid: !$v.cardNum.required }"
       class="btn-continue"
+      @click="passCardNum(), $router.push('/new-card-mmyy')"
     >
       Продолжить
     </button>
@@ -59,17 +60,10 @@ export default {
   validations: {
     cardNum: { required },
   },
-  //   methods: {
-  //     passCardName() {
-  //       this.$store.dispatch('actionCardName', this.cardField)
-  //     },
-  //   },
-  //   watch: {
-  //     cardField: function() {
-  //       if (this.cardField === 'Master card') {
-  //         console.log('working')
-  //       }
-  //     },
-  //   },
+  methods: {
+    passCardNum() {
+      this.$store.dispatch('actionCardNum', this.cardNum)
+    },
+  },
 }
 </script>

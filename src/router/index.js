@@ -25,6 +25,21 @@ const routes = [
     component: () => import('../views/AddNewCard-num.vue'),
   },
   {
+    path: '/new-card-mmyy',
+    name: 'new-card-mmyy',
+    component: () => import('../views/AddNewCard-mmyy.vue'),
+  },
+  {
+    path: '/new-card-cvv',
+    name: 'new-card-cvv',
+    component: () => import('../views/AddNewCard-cvv.vue'),
+  },
+  {
+    path: '/new-card-fsname',
+    name: 'new-card-fsname',
+    component: () => import('../views/AddNewCard-fsname.vue'),
+  },
+  {
     path: '/main-page',
     name: 'main-page',
     component: () => import('../views/MainPage.vue'),

@@ -27,7 +27,7 @@
       :disabled="!$v.cardField.required"
       :class="{ invalid: !$v.cardField.required }"
       class="btn-continue"
-      @click="passCardName"
+      @click="passCardName(), $router.push('/new-card-num')"
     >
       Продолжить
     </button>
@@ -74,13 +74,6 @@ export default {
   methods: {
     passCardName() {
       this.$store.dispatch('actionCardName', this.cardField)
-    },
-  },
-  watch: {
-    cardField: function() {
-      if (this.cardField === 'Master card') {
-        console.log('working')
-      }
     },
   },
 }
