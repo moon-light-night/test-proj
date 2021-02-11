@@ -1,0 +1,15 @@
+@import '../Plugins/variables.scss';
+@import '../Plugins/mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.main-back {
+  position: absolute;
+  width: $width-content;
+  height: 811.8px;
+  background: $newBackgroundColor;
+}
+.card-position {
+  position: absolute;
+  top: 258px;
+  left: 20px;
+}

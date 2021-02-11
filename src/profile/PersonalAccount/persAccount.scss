@@ -14,9 +14,9 @@ a {
   height: 95px;
   width: $width-content;
   position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
+  left: 0;
+  // right: 0%;
+  top: 0;
   bottom: 21.79%;
   background: url('~@/profile/PersonalAccount/images/131212008_144294664130776_3406834389164427514_n2.png');
 }
@@ -25,6 +25,7 @@ a {
   top: 95px;
   width: $width-content;
   height: 72px;
+  left: 0;
   background: rgba(196, 196, 196, 0.57);
 }
 .person {
@@ -36,6 +37,7 @@ a {
   border-radius: 0px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   z-index: -100;
+  left: 0;
 }
 .avatar {
   height: 100px;
@@ -104,6 +106,7 @@ a {
   position: absolute;
   top: 0%;
   z-index: -150;
+  // left: 0;
   .line {
     position: absolute;
     width: $width-content;

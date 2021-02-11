@@ -6,17 +6,18 @@ import store from './store'
 import Vuelidate from 'vuelidate'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+// import Vuetify from '@/plugins/vuetify'
+// import 'vuetify/dist/vuetify.min.css'
 import './registerServiceWorker'
 import './profile/main.scss'
 
 Vue.config.productionTip = false
 
-Vue.use(VueAxios, axios, Vuelidate, Vuex, Vuetify)
+Vue.use(VueAxios, axios, Vuelidate, Vuex)
 
 new Vue({
   router,
   store,
+  // Vuetify,
   render: (h) => h(App),
 }).$mount('#app')
