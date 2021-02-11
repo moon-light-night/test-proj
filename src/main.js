@@ -13,7 +13,10 @@ import './profile/main.scss'
 
 Vue.config.productionTip = false
 
-Vue.use(VueAxios, axios, Vuelidate, Vuex)
+Vue.use(Vuelidate)
+Vue.use(axios)
+Vue.use(VueAxios)
+Vue.use(Vuex)
 
 new Vue({
   router,

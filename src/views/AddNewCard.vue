@@ -4,28 +4,39 @@
     <div class="nav"></div>
     <div class="emty-field __payment"></div>
     <img class="card-position" src="@/profile/AddNewCard/images/defCard.svg" />
-    <!-- <v-row>
-      <v-textarea label="helper" value="lorem5dfd"></v-textarea>
-    </v-row>
-    <v-input
-      error-count="2"
-      :error-messages="['Fatal error', 'Another error']"
-      error
-      disabled
+    <fieldset class="field">
+      <legend>Название карты</legend>
+      <input
+        type="text"
+        id="cardField"
+        v-model="cardField"
+        placeholder="Например Visa"
+      />
+    </fieldset>
+    <button
+      :disabled="!$v.cardField.required"
+      :class="{ invalid: !$v.cardField.required }"
+      class="btn-continue"
     >
-      Inputfdfffffffffsvd
-    </v-input> -->
+      Продолжить
+    </button>
+    <img
+      class="footer__newcard"
+      src="@/profile/PersonalAccount/images/footer.png"
+    />
   </div>
 </template>
 
 <script>
-export default {}
+import { required } from 'vuelidate/lib/validators'
+export default {
+  data: () => ({
+    cardField: '',
+  }),
+  validations: {
+    cardField: { required },
+  },
+}
 </script>
 
-<style lang="scss" scoped>
-v-input {
-  z-index: 300;
-  font-size: 30px;
-  color: white;
-}
-</style>
+<style lang="scss" scoped></style>
