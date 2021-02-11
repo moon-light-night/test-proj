@@ -32,6 +32,7 @@ a {
   height: 461px;
   width: $width-content;
   position: absolute;
+  top: 0;
   background: $newBackgroundColor;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
@@ -56,6 +57,7 @@ a {
   left: 107px;
   top: 329px;
   text-align: center;
+  margin: 0;
 }
 .phone-number {
   @include main-text;
@@ -63,6 +65,7 @@ a {
   left: 131px;
   top: 354px;
   text-align: center;
+  margin: 0;
 }
 .line {
   position: absolute;
@@ -71,6 +74,7 @@ a {
   left: 20px;
   top: 404.5px;
   border-top: 1px solid rgba(52, 142, 255, 0.5);
+  margin: 0;
 }
 .close-account-button {
   @include arrow;
@@ -87,6 +91,7 @@ a {
     width: 210px;
     left: 60px;
     top: 422px;
+    margin: 0;
   }
   img {
     @include arrow;
@@ -104,9 +109,9 @@ a {
   height: 1038px;
   width: $width-content;
   position: absolute;
-  top: 0%;
+  top: 0;
   z-index: -150;
-  // left: 0;
+  left: 0;
   .line {
     position: absolute;
     width: $width-content;

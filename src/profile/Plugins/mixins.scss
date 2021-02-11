@@ -12,6 +12,7 @@
 }
 @mixin content-text {
   position: absolute;
+  margin: 0;
   font: {
     family: $main-font;
     weight: normal;
@@ -25,15 +26,18 @@
   position: absolute;
   width: 30px;
   height: 30px;
+  margin: 0;
 }
 @mixin arrow {
   position: absolute;
   height: 14px;
   width: 14px;
   color: $white;
+  margin: 0;
 }
 @mixin line {
   position: absolute;
+  margin: 0;
   width: 315px;
   border-top: 2px solid rgba(0, 0, 0, 0.25);
 }

@@ -10,12 +10,14 @@
   height: 978px;
   width: $width-content;
   top: 0;
+  left: 0;
   background: $newBackgroundColor;
   z-index: -200;
 }
 .footer__payment {
   position: absolute;
   top: 806px;
+  left: 0;
   width: $width-content;
   z-index: 300;
 }
@@ -40,12 +42,14 @@
   width: 335px;
   left: 20px;
   top: 732px;
+  margin: 0;
 }
 .footer-rectangle {
   width: $width-content;
   position: absolute;
   top: 883px;
   height: 95px;
+  left: 0;
   background: white;
   z-index: 500;
 }

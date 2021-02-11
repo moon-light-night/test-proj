@@ -1,25 +1,20 @@
 <template>
   <v-app>
-    <v-container>
-      <div class="main-back"></div>
-      <div class="nav"></div>
-      <div class="emty-field __payment"></div>
-      <img
-        class="card-position"
-        src="@/profile/AddNewCard/images/defCard.svg"
-      />
-      <v-row>
-        <v-textarea label="helper" value="lorem5dfd"></v-textarea>
-      </v-row>
-      <v-input
-        error-count="2"
-        :error-messages="['Fatal error', 'Another error']"
-        error
-        disabled
-      >
-        Inputfdfffffffffsvd
-      </v-input>
-    </v-container>
+    <div class="main-back"></div>
+    <div class="nav"></div>
+    <div class="emty-field __payment"></div>
+    <img class="card-position" src="@/profile/AddNewCard/images/defCard.svg" />
+    <v-row>
+      <v-textarea label="helper" value="lorem5dfd"></v-textarea>
+    </v-row>
+    <v-input
+      error-count="2"
+      :error-messages="['Fatal error', 'Another error']"
+      error
+      disabled
+    >
+      Inputfdfffffffffsvd
+    </v-input>
   </v-app>
 </template>
 
