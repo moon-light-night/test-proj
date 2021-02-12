@@ -34,7 +34,7 @@
       </div>
       <div class="item item-3">
         <img src="@/profile/PersonalAccount/images/payment1.svg" class="icon" />
-        <p><a href="#">Оплата</a></p>
+        <p><a @click="$router.push('/new-card')">Оплата</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
