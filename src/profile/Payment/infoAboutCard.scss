@@ -1,0 +1,101 @@
+@import '../Plugins/variables.scss';
+@import '../Plugins/mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.card-info__first {
+  position: absolute;
+  z-index: 100;
+  transform: rotate(90deg);
+  left: -48px;
+  width: 470px;
+  height: 330px;
+  top: 250px;
+}
+.card-info__sec {
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  z-index: 100;
+}
+.card-info-backside__sec {
+  position: absolute;
+  z-index: 100;
+  top: 470px;
+  left: 20px;
+}
+.firstCardPosition {
+  @include text__payment;
+  position: absolute;
+  border-radius: 5px;
+  width: 335px;
+  height: 50px;
+  top: 690px;
+  left: 20px;
+  border: none;
+  cursor: pointer;
+}
+.secondCardPosition {
+  position: absolute;
+  top: 690px !important;
+  @include text__payment;
+  position: absolute;
+  border-radius: 5px;
+  width: 335px;
+  height: 50px;
+  left: 20px;
+  border: none;
+  cursor: pointer;
+}
+.logo__info {
+  position: absolute;
+  top: 400px;
+  left: 250px;
+  z-index: 100;
+}
+.mmyy__info {
+  position: absolute;
+  top: 405px;
+  left: 40px;
+  z-index: 100;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+}
+.num__info {
+  position: absolute;
+  top: 380px;
+  left: 40px;
+  font-family: $main-font;
+  font-style: normal;
+  z-index: 100;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+}
+.z-index {
+  z-index: 100 !important;
+}
+.back-side {
+  z-index: 100 !important;
+}
+.black {
+  top: 505px !important;
+}
+.white {
+  top: 580px !important;
+}
+.recSVG-info {
+  top: 592px !important;
+}
+.recSVG-text-info {
+  top: 589px !important;
+}
+.firSecName-info {
+  top: 640px !important;
+}

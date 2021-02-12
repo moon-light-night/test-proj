@@ -3,6 +3,7 @@
     <div class="main-back"></div>
     <div class="nav"></div>
     <div class="emty-field __payment"></div>
+    <p class="nameCardWithName">{{ returnCardName }}</p>
     <img
       class="card-position"
       src="@/profile/AddNewCard/images/Rectangle14.png"
@@ -18,11 +19,19 @@
         id="cardNum"
         v-model="cardNum"
         placeholder="Например 1234 1234 1234 1234"
+        maxlength="19"
       />
     </fieldset>
     <button
-      :disabled="!$v.cardNum.required"
-      :class="{ invalid: !$v.cardNum.required }"
+      :disabled="
+        !$v.cardNum.required || !$v.cardNum.minLength || !$v.cardNum.maxLength
+      "
+      :class="{
+        invalid:
+          !$v.cardNum.required ||
+          !$v.cardNum.minLength ||
+          !$v.cardNum.maxLength,
+      }"
       class="btn-continue"
       @click="passCardNum(), $router.push('/new-card-mmyy')"
     >
@@ -36,6 +45,13 @@
       src="@/profile/AddNewCard/images/mc_vrt_rev1.svg"
       alt="img"
       class="logo"
+      v-if="returnCardName === 'Master card'"
+    />
+    <img
+      src="@/profile/AddNewCard/images/Visa.svg"
+      alt="img"
+      class="logo"
+      v-if="returnCardName === 'Visa'"
     />
     <img src="@/profile/AddNewCard/images/CB.svg" alt="img" class="logo-cb" />
     <img
@@ -52,14 +68,16 @@
 </template>
 
 <script>
-import { required } from 'vuelidate/lib/validators'
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardNum: '',
   }),
   validations: {
-    cardNum: { required },
+    cardNum: { required, minLength: minLength(19), maxLength: maxLength(19) },
   },
+  computed: mapGetters(['returnCardName']),
   methods: {
     passCardNum() {
       this.$store.dispatch('actionCardNum', this.cardNum)

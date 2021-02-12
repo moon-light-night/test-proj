@@ -27,11 +27,21 @@
         id="cardfsname"
         v-model="cardfsname"
         placeholder="Например Maria Mar"
+        maxlength="30"
       />
     </fieldset>
     <button
-      :disabled="!$v.cardfsname.required"
-      :class="{ invalid: !$v.cardfsname.required }"
+      :disabled="
+        !$v.cardfsname.required ||
+          !$v.cardfsname.minLength ||
+          !$v.cardfsname.maxLength
+      "
+      :class="{
+        invalid:
+          !$v.cardfsname.required ||
+          !$v.cardfsname.minLength ||
+          !$v.cardfsname.maxLength,
+      }"
       class="btn-continue"
       @click="passCardfsname(), $router.push('/payment'), addCard()"
     >
@@ -45,14 +55,14 @@
 </template>
 
 <script>
-import { required } from 'vuelidate/lib/validators'
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardfsname: '',
   }),
   validations: {
-    cardfsname: { required },
+    cardfsname: { required, minLength: minLength(5), maxLength: maxLength(29) },
   },
   computed: mapGetters(['returnCardcvv']),
   methods: {

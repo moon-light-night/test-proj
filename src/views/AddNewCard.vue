@@ -3,9 +3,13 @@
     <div class="main-back"></div>
     <div class="nav"></div>
     <div class="emty-field __payment"></div>
-    <p class="nameCard" v-if="this.cardField !== 'Master card'">
+    <p
+      class="nameCard"
+      v-if="this.cardField !== 'Master card' && this.cardField !== 'Visa'"
+    >
       Название карты
     </p>
+    <p class="nameCardWithName">{{ cardField }}</p>
     <img
       class="card-position"
       src="@/profile/AddNewCard/images/Rectangle14.png"
@@ -21,11 +25,21 @@
         id="cardField"
         v-model="cardField"
         placeholder="Например Visa"
+        maxlength="20"
       />
     </fieldset>
     <button
-      :disabled="!$v.cardField.required"
-      :class="{ invalid: !$v.cardField.required }"
+      :disabled="
+        !$v.cardField.required ||
+          !$v.cardField.minLength ||
+          !$v.cardField.maxLength
+      "
+      :class="{
+        invalid:
+          !$v.cardField.required ||
+          !$v.cardField.minLength ||
+          !$v.cardField.maxLength,
+      }"
       class="btn-continue"
       @click="passCardName(), $router.push('/new-card-num')"
     >
@@ -42,34 +56,40 @@
       v-if="this.cardField === 'Master card'"
     />
     <img
+      src="@/profile/AddNewCard/images/Visa.svg"
+      alt="img"
+      class="logo"
+      v-if="this.cardField === 'Visa'"
+    />
+    <img
       src="@/profile/AddNewCard/images/CB.svg"
       alt="img"
       class="logo-cb"
-      v-if="this.cardField === 'Master card'"
+      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
     />
     <img
       src="@/profile/AddNewCard/images/UniversalBank.svg"
       alt="img"
       class="logo-bank"
-      v-if="this.cardField === 'Master card'"
+      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
     />
     <img
       src="@/profile/AddNewCard/images/Line2.svg"
       alt="img"
       class="logo-line"
-      v-if="this.cardField === 'Master card'"
+      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
     />
   </div>
 </template>
 
 <script>
-import { required } from 'vuelidate/lib/validators'
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 export default {
   data: () => ({
     cardField: '',
   }),
   validations: {
-    cardField: { required },
+    cardField: { required, minLength: minLength(3), maxLength: maxLength(19) },
   },
   methods: {
     passCardName() {

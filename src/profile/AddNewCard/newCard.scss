@@ -9,52 +9,6 @@
   left: 0;
   background: $newBackgroundColor;
 }
-
-// .card-position {
-//   position: absolute;
-//   top: 258px;
-//   left: 20px;
-// }
-// .card-wifi {
-//   position: absolute;
-//   top: 339px;
-//   left: 318px;
-// }
-// .card-chip {
-//   position: absolute;
-//   top: 332px;
-//   left: 40px;
-// }
-// .mmyy {
-//   position: absolute;
-//   top: 416px;
-//   left: 40px;
-//   font-family: $main-font;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 14px;
-//   line-height: 24px;
-//   letter-spacing: 0.15px;
-//   color: white;
-// }
-// .nameCard {
-//   position: absolute;
-//   top: 283px;
-//   left: 40px;
-//   font-family: $main-font;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-size: 14px;
-//   line-height: 24px;
-//   letter-spacing: 0.15px;
-//   color: white;
-// }
-// .card-stars {
-//   position: absolute;
-//   top: 385px;
-//   left: 38px;
-// }
-
 .field {
   position: absolute;
   top: 510px;
@@ -117,11 +71,13 @@
   top: 614px;
   left: 20px;
   border: none;
+  cursor: pointer;
 }
 .invalid {
-  color: red !important;
+  color: rgb(112, 112, 112) !important;
   background-color: rgb(175, 175, 175) !important;
-  border: 1px solid red;
+  border: 1px solid rgb(49, 49, 49);
+  cursor: not-allowed;
 }
 .invalid-input {
 }
@@ -259,4 +215,17 @@
   color: white;
   z-index: 10;
   margin: 0;
+}
+.nameCardWithName {
+  position: absolute;
+  top: 290px !important;
+  left: 40px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: white;
+  z-index: 10;
 }

@@ -10,6 +10,7 @@ export default new Vuex.Store({
     cardmmyy: '',
     cardcvv: '',
     cardfsname: '',
+    link: '',
     info: [],
   },
   mutations: {
@@ -35,6 +36,9 @@ export default new Vuex.Store({
         state.cardfsname,
       ]
     },
+    setId(state, link) {
+      state.link = link
+    },
   },
   actions: {
     actionCardName(ctx, cardName) {
@@ -52,6 +56,9 @@ export default new Vuex.Store({
     actionCardfsname(ctx, cardfsname) {
       ctx.commit('setCardfsname', cardfsname)
     },
+    passId(ctx, link) {
+      ctx.commit('setId', link)
+    },
   },
   getters: {
     returnCardNum(state) {
@@ -62,6 +69,12 @@ export default new Vuex.Store({
     },
     passInfoAboutNewCard(state) {
       return state.info
+    },
+    returnCardName(state) {
+      return state.cardName
+    },
+    returnLink(state) {
+      return state.link
     },
   },
   modules: {},

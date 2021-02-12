@@ -16,7 +16,7 @@
 }
 .footer__payment {
   position: absolute;
-  top: 806px;
+  top: 901px;
   left: 0;
   width: $width-content;
   z-index: 300;
@@ -46,15 +46,6 @@
   &:hover {
     cursor: pointer;
   }
-}
-.footer-rectangle {
-  width: $width-content;
-  position: absolute;
-  top: 883px;
-  height: 95px;
-  left: 0;
-  background: white;
-  z-index: 500;
 }
 .ul {
   display: flex;
