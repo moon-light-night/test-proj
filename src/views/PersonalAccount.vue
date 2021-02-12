@@ -20,42 +20,36 @@
     <div class="content">
       <p class="line"></p>
       <div class="list"></div>
-      <!-- hh -->
       <div class="item item-1">
         <img src="@/profile/PersonalAccount/images/star1.svg" class="icon" />
         <p><a href="#">Услуги</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <div class="item item-2">
         <img src="@/profile/PersonalAccount/images/folder1.svg" class="icon" />
         <p><a href="#">Документы</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <div class="item item-3">
         <img src="@/profile/PersonalAccount/images/payment1.svg" class="icon" />
         <p><a href="#">Оплата</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <div class="item item-4">
         <img src="@/profile/PersonalAccount/images/inbox1.svg" class="icon" />
         <p><a href="#">Сообщения</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <div class="item item-5">
         <img src="@/profile/PersonalAccount/images/tasks1.svg" class="icon" />
         <p><a href="#">Уведомления</a></p>
         <span></span>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <div class="item item-6">
         <img
           src="@/profile/PersonalAccount/images/settings1.svg"
@@ -64,7 +58,6 @@
         <p><a href="#">Настройки</a></p>
         <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
       </div>
-      <!-- hh -->
       <img
         class="logout-icon"
         src="@/profile/PersonalAccount/images/lock1.svg"
@@ -78,5 +71,3 @@
 <script>
 export default {}
 </script>
-
-<style lang="scss" scoped></style>

@@ -5,7 +5,11 @@
     <div class="emty-field __payment"></div>
     <p
       class="nameCard"
-      v-if="this.cardField !== 'Master card' && this.cardField !== 'Visa'"
+      v-if="
+        this.cardField !== 'Master card' &&
+          this.cardField !== 'Visa' &&
+          this.cardField !== 'МИР'
+      "
     >
       Название карты
     </p>
@@ -62,28 +66,47 @@
       v-if="this.cardField === 'Visa'"
     />
     <img
+      src="@/profile/AddNewCard/images/mir.svg"
+      alt="img"
+      class="logo"
+      v-if="this.cardField === 'МИР'"
+    />
+    <img
       src="@/profile/AddNewCard/images/CB.svg"
       alt="img"
       class="logo-cb"
-      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
+      v-if="
+        this.cardField === 'Master card' ||
+          this.cardField === 'Visa' ||
+          this.cardField === 'МИР'
+      "
     />
     <img
       src="@/profile/AddNewCard/images/UniversalBank.svg"
       alt="img"
       class="logo-bank"
-      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
+      v-if="
+        this.cardField === 'Master card' ||
+          this.cardField === 'Visa' ||
+          this.cardField === 'МИР'
+      "
     />
     <img
       src="@/profile/AddNewCard/images/Line2.svg"
       alt="img"
       class="logo-line"
-      v-if="this.cardField === 'Master card' || this.cardField === 'Visa'"
+      v-if="
+        this.cardField === 'Master card' ||
+          this.cardField === 'Visa' ||
+          this.cardField === 'МИР'
+      "
     />
   </div>
 </template>
 
 <script>
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardField: '',
@@ -91,12 +114,22 @@ export default {
   validations: {
     cardField: { required, minLength: minLength(3), maxLength: maxLength(19) },
   },
+  computed: mapGetters([
+    'passInfoAboutNewCard',
+    'returnLink',
+    'returnInfoSecond',
+    'returnInfoThird',
+  ]),
   methods: {
     passCardName() {
-      this.$store.dispatch('actionCardName', this.cardField)
+      if (this.passInfoAboutNewCard === null) {
+        this.$store.dispatch('actionCardName', this.cardField)
+      } else if (this.returnInfoSecond === null) {
+        this.$store.dispatch('actionCardNameSecond', this.cardField)
+      } else if (this.returnInfoThird === null) {
+        this.$store.dispatch('actionCardNameThird', this.cardField)
+      }
     },
   },
 }
 </script>
-
-<style lang="scss" scoped></style>

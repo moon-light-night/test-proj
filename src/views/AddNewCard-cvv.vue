@@ -7,7 +7,6 @@
       class="card-position"
       src="@/profile/AddNewCard/images/Rectangle14.png"
     />
-
     <img
       class="blackStripe"
       src="@/profile/AddNewCard/images/blackStripe.svg"
@@ -19,7 +18,6 @@
     <img class="recSVG" src="@/profile/AddNewCard/images/recSVG.svg" />
     <p class="firSecName">Имя Фамилия</p>
     <p class="recSVG-text">{{ cardcvv }}</p>
-
     <fieldset class="field">
       <legend>CVV</legend>
       <input
@@ -54,6 +52,7 @@
 
 <script>
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardcvv: '',
@@ -61,9 +60,24 @@ export default {
   validations: {
     cardcvv: { required, minLength: minLength(3), maxLength: maxLength(3) },
   },
+  computed: mapGetters([
+    'returnCardNum',
+    'returnCardName',
+    'returnCardNameSecond',
+    'returnCardNumSecond',
+    'passInfoAboutNewCard',
+    'returnInfoSecond',
+    'returnInfoThird',
+  ]),
   methods: {
     passCardcvv() {
-      this.$store.dispatch('actionCardcvv', this.cardcvv)
+      if (this.passInfoAboutNewCard === null) {
+        this.$store.dispatch('actionCardcvv', this.cardcvv)
+      } else if (this.returnInfoSecond === null) {
+        this.$store.dispatch('actionCardcvvSecond', this.cardcvv)
+      } else if (this.returnInfoThird === null) {
+        this.$store.dispatch('actionCardcvvThird', this.cardcvv)
+      }
     },
   },
 }

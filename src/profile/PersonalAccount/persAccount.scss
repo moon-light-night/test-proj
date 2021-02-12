@@ -2,7 +2,6 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-/*first page*/
 a {
   text-decoration: none;
   color: white;
@@ -15,7 +14,6 @@ a {
   width: $width-content;
   position: absolute;
   left: 0;
-  // right: 0%;
   top: 0;
   bottom: 21.79%;
   background: url('~@/profile/PersonalAccount/images/131212008_144294664130776_3406834389164427514_n2.png');

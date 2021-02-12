@@ -30,12 +30,13 @@
   left: 20px;
 }
 .card__payment {
-  position: absolute;
-  top: 261px;
-  left: 57px;
+  padding-top: 250px;
   &:hover {
     cursor: pointer;
   }
+}
+#fir {
+  padding-left: 50px;
 }
 .addCard__payment {
   @include text__payment;
@@ -53,20 +54,79 @@
     list-style-type: none;
   }
 }
+.overFlow {
+  width: 375px;
+  overflow: auto;
+  display: flex;
+}
 .secondCard {
-  position: absolute;
-  top: 261px;
-  left: 309px;
+  width: 260px;
+  height: 410px;
+  padding-top: 250px;
+  padding-left: 20px;
   &:hover {
     cursor: pointer;
   }
-  z-index: 200;
 }
 .card__paymentAfterAdding {
-  position: absolute;
-  top: 261px;
-  left: 20px !important;
+  padding-left: 10px !important;
   &:hover {
     cursor: pointer;
   }
+}
+.margin__payment {
+  left: 300px !important;
+}
+.z-index {
+  z-index: 500;
+}
+.h-payment {
+  color: white;
+  transform: rotate(270deg);
+  position: relative;
+  top: 400px;
+  left: -160px;
+  letter-spacing: 3px;
+}
+.thirdCard {
+  width: 260px;
+  height: 410px;
+  padding-top: 250px;
+  padding-left: 45px;
+  margin-left: -48px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.h-payment-third {
+  color: white;
+  transform: rotate(270deg);
+  position: relative;
+  top: 400px;
+  right: 150px;
+  letter-spacing: 3px;
+}
+.third-div {
+  width: 20px;
+}
+.fourthCard {
+  width: 260px;
+  height: 410px;
+  padding-top: 250px;
+  padding-left: 45px;
+  margin-left: -48px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.h-payment-fourth {
+  color: white;
+  transform: rotate(270deg);
+  position: relative;
+  top: 400px;
+  right: 150px;
+  letter-spacing: 3px;
+}
+.fourth-div {
+  width: 20px;
 }

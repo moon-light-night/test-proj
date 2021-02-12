@@ -7,7 +7,6 @@
       class="card-position"
       src="@/profile/AddNewCard/images/Rectangle14.png"
     />
-
     <img
       class="blackStripe"
       src="@/profile/AddNewCard/images/blackStripe.svg"
@@ -18,8 +17,9 @@
     />
     <img class="recSVG" src="@/profile/AddNewCard/images/recSVG.svg" />
     <p class="firSecName">{{ cardfsname }}</p>
-    <p class="recSVG-text">{{ returnCardcvv }}</p>
-
+    <p class="recSVG-text">
+      {{ returnCardcvvThird || returnCardcvvSecond || returnCardcvv }}
+    </p>
     <fieldset class="field">
       <legend>Имя Фамилия</legend>
       <input
@@ -64,10 +64,23 @@ export default {
   validations: {
     cardfsname: { required, minLength: minLength(5), maxLength: maxLength(29) },
   },
-  computed: mapGetters(['returnCardcvv']),
+  computed: mapGetters([
+    'returnCardcvv',
+    'returnCardcvvSecond',
+    'passInfoAboutNewCard',
+    'returnInfoSecond',
+    'returnInfoThird',
+    'returnCardcvvThird',
+  ]),
   methods: {
     passCardfsname() {
-      this.$store.dispatch('actionCardfsname', this.cardfsname)
+      if (this.passInfoAboutNewCard === null) {
+        this.$store.dispatch('actionCardfsname', this.cardfsname)
+      } else if (this.returnInfoSecond === null) {
+        this.$store.dispatch('actionCardfsnameSecond', this.cardfsname)
+      } else if (this.returnInfoThird === null) {
+        this.$store.dispatch('actionCardfsnameThird', this.cardfsname)
+      }
     },
     addCard() {},
   },
