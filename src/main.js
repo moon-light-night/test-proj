@@ -6,8 +6,6 @@ import store from './store'
 import Vuelidate from 'vuelidate'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-// import Vuetify from 'vuetify'
-// import 'vuetify/dist/vuetify.min.css'
 import './registerServiceWorker'
 import './profile/main.scss'
 
@@ -21,6 +19,5 @@ Vue.use(Vuex)
 new Vue({
   router,
   store,
-  // Vuetify,
   render: (h) => h(App),
 }).$mount('#app')
