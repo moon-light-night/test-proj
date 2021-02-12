@@ -1,70 +1,159 @@
 <template>
   <div>
-    <div class="nav"></div>
-    <div class="emty-field"></div>
-    <div class="person"></div>
-    <img class="avatar" src="@/profile/PersonalAccount/images/Ellipse14.png" />
-    <p class="user-name-text">Мария Маракова</p>
-    <p class="phone-number">+7 (911) 715-58-67</p>
-    <img
-      @click="$router.push('/main-page')"
-      class="close-account-button"
-      src="@/profile/PersonalAccount/images/close.png"
-    />
-    <p class="line"></p>
-    <div class="personal-info">
-      <p>Персональная информация</p>
-      <img src="@/profile/PersonalAccount/images/arrow.svg" />
-      <img class="svg" src="@/profile/PersonalAccount/images/bookmark1.svg" />
-    </div>
-    <div class="content">
-      <p class="line"></p>
-      <div class="list"></div>
-      <div class="item item-1">
-        <img src="@/profile/PersonalAccount/images/star1.svg" class="icon" />
-        <p><a href="#">Услуги</a></p>
-        <span></span>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <div class="item item-2">
-        <img src="@/profile/PersonalAccount/images/folder1.svg" class="icon" />
-        <p><a href="#">Документы</a></p>
-        <span></span>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <div class="item item-3">
-        <img src="@/profile/PersonalAccount/images/payment1.svg" class="icon" />
-        <p><a @click="$router.push('/new-card')">Оплата</a></p>
-        <span></span>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <div class="item item-4">
-        <img src="@/profile/PersonalAccount/images/inbox1.svg" class="icon" />
-        <p><a href="#">Сообщения</a></p>
-        <span></span>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <div class="item item-5">
-        <img src="@/profile/PersonalAccount/images/tasks1.svg" class="icon" />
-        <p><a href="#">Уведомления</a></p>
-        <span></span>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <div class="item item-6">
+    <div class="content"></div>
+    <div class="person-layout"></div>
+    <div class="list-layout"></div>
+    <ul>
+      <li>
         <img
-          src="@/profile/PersonalAccount/images/settings1.svg"
-          class="icon"
+          @click="$router.push('/main-page')"
+          class="close-account-button"
+          src="@/profile/PersonalAccount/images/close.png"
         />
-        <p><a href="#">Настройки</a></p>
-        <img src="@/profile/PersonalAccount/images/arrow.svg" class="arrow" />
-      </div>
-      <img
-        class="logout-icon"
-        src="@/profile/PersonalAccount/images/lock1.svg"
-      />
-      <p class="logout"><a @click="$router.push('/main-page')">Выйти</a></p>
-      <img class="footer" src="@/profile/PersonalAccount/images/footer.png" />
-    </div>
+      </li>
+      <li class="avatar">
+        <img src="@/profile/PersonalAccount/images/Avatar.png" />
+      </li>
+      <li><p class="user-name-text">Мария Маракова</p></li>
+      <li><p class="phone-number">+7 (911) 715-58-67</p></li>
+      <li>
+        <ul
+          class="personal-info second mgn-btm"
+          @click="$router.push('/main-page')"
+        >
+          <li><p class="line"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/bookmark2.png"
+            />
+          </li>
+          <li><p>Персональная информация</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <ul class="personal-info second" @click="$router.push('/main-page')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img class="svg" src="@/profile/PersonalAccount/images/star1.svg" />
+          </li>
+          <li><p>Услуги</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="personal-info second" @click="$router.push('/main-page')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/folder1.svg"
+            />
+          </li>
+          <li><p>Документы</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="personal-info second" @click="$router.push('/payment')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/payment1.svg"
+            />
+          </li>
+          <li><p>Оплаты</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="personal-info second" @click="$router.push('/main-page')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/inboxmax.png"
+            />
+          </li>
+          <li><p>Сообщения</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="personal-info second" @click="$router.push('/main-page')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/tasks1.svg"
+            />
+          </li>
+          <li><p>Уведомления</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="personal-info second" @click="$router.push('/main-page')">
+          <li><p class="line-list"></p></li>
+          <li>
+            <img
+              class="svg"
+              src="@/profile/PersonalAccount/images/settings1.svg"
+            />
+          </li>
+          <li><p>Настройки</p></li>
+          <li>
+            <img
+              class="arrow"
+              src="@/profile/PersonalAccount/images/arrow.svg"
+            />
+          </li>
+        </ul>
+        <ul class="personal-info second mgn-tp">
+          <li>
+            <img
+              @click="$router.push('/main-page')"
+              class="svg"
+              src="@/profile/PersonalAccount/images/lock1.svg"
+            />
+          </li>
+          <li><p @click="$router.push('/main-page')">Выйти</p></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </template>
 

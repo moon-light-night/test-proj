@@ -9,128 +9,152 @@ a {
     cursor: pointer;
   }
 }
-.nav {
-  height: 95px;
-  width: $width-content;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 21.79%;
-  background: url('~@/profile/PersonalAccount/images/131212008_144294664130776_3406834389164427514_n2.png');
+ul {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+    padding-bottom: 5px;
+  }
 }
 .emty-field {
-  position: absolute;
-  top: 95px;
-  width: $width-content;
   height: 72px;
-  left: 0;
   background: rgba(196, 196, 196, 0.57);
 }
-.person {
-  height: 461px;
-  width: $width-content;
-  position: absolute;
-  top: 0;
-  background: $newBackgroundColor;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  z-index: -100;
-  left: 0;
-}
 .avatar {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  left: 137px;
-  top: 209px;
+  margin-top: 150px;
+  text-align: center;
+  img {
+    width: 250px;
+  }
 }
 .user-name-text {
   @include main-text;
   line-height: 20px;
-  height: 20px;
-  width: 161px;
+  font-size: 18px !important;
   left: 107px;
+  padding-top: 10px;
   top: 329px;
   text-align: center;
   margin: 0;
 }
 .phone-number {
   @include main-text;
-  height: 20px;
   left: 131px;
+  font-size: 18px !important;
+  padding-top: 10px;
   top: 354px;
   text-align: center;
   margin: 0;
 }
-.line {
-  position: absolute;
-  width: 335px;
-  height: 0px;
-  left: 20px;
-  top: 404.5px;
-  border-top: 1px solid rgba(52, 142, 255, 0.5);
-  margin: 0;
+.personal-info {
+  @include main-text;
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  li {
+    .svg {
+      position: absolute;
+      left: 14px;
+      padding-top: 3px;
+      width: 40px;
+    }
+    p {
+      position: absolute;
+      left: 60px;
+      font-size: 14px !important;
+      width: max-content;
+    }
+    .arrow {
+      padding-top: 18px;
+      padding-left: 90vw;
+      padding-bottom: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .line {
+      position: absolute;
+      top: 450px;
+      left: 2%;
+      border-top: 2px solid rgba(52, 142, 255, 0.5);
+      width: 95%;
+      margin-top: 60px;
+    }
+    .line-list {
+      left: 50px;
+      border-top: 2px solid rgba(2, 40, 87, 0.5);
+      width: 88%;
+      margin-top: 47px;
+    }
+  }
 }
+.second {
+  padding-right: 245px;
+  .arrow {
+    position: absolute;
+    right: 40px;
+  }
+}
+.mgn-btm {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.mgn-tp {
+  margin-top: 80px;
+}
+
 .close-account-button {
   @include arrow;
-  left: 31px;
-  top: 194px;
+  padding-left: 10vw;
+  width: 14px !important;
+  position: absolute;
+  top: 160px;
+  text-align: center;
   &:hover {
     cursor: pointer;
   }
 }
-.personal-info {
-  p {
-    @include main-text;
-    height: 22px;
-    width: 210px;
-    left: 60px;
-    top: 422px;
-    margin: 0;
-  }
-  img {
-    @include arrow;
-    left: 338.58px;
-    top: 426.46px;
-  }
-  .svg {
-    @include svg;
-    top: 418px;
-    left: 20px;
-  }
-}
 .content {
   background: $newBackgroundColor;
-  height: 1038px;
-  width: $width-content;
   position: absolute;
   top: 0;
-  z-index: -150;
   left: 0;
-  .line {
-    position: absolute;
-    width: $width-content;
-    top: 480px;
-    left: 0;
-    border-top: 2px solid rgba(0, 0, 0, 0.25);
-    z-index: 200;
-  }
-  .logout {
-    @include content-text;
-    top: 884px;
-    left: 60px;
-  }
-  .logout-icon {
-    @include svg;
-    left: 20px;
-    top: 881px;
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    z-index: 300;
-  }
+  right: 0;
+  bottom: 0;
+  height: 1070px;
+  z-index: -10;
+}
+.person-layout {
+  background: $person-layout-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 575px;
+  z-index: -5;
+}
+.list-layout {
+  background: $person-layout-color;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 595px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 360px;
+  z-index: -5;
+}
+.logout-icon {
+  @include svg;
+  left: 20px;
+  top: 881px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  z-index: 300;
 }
 .list {
   background: $newBackgroundColor;
@@ -139,124 +163,4 @@ a {
   width: $width-content;
   left: 0px;
   top: 481px;
-}
-
-/**/
-.item {
-  .icon {
-    @include svg;
-  }
-  p {
-    @include content-text;
-  }
-  .arrow {
-    @include arrow;
-  }
-  span {
-    @include line;
-  }
-}
-.item-1 {
-  .icon {
-    left: 20px;
-    top: 496px;
-  }
-  p {
-    left: 60px;
-    top: 499px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 504.46px;
-  }
-  span {
-    top: 541px;
-    left: 60px;
-  }
-}
-.item-2 {
-  .icon {
-    left: 20px;
-    top: 556px;
-  }
-  p {
-    left: 60px;
-    top: 619px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 564.5px;
-  }
-  span {
-    top: 601px;
-    left: 60px;
-  }
-}
-.item-3 {
-  .icon {
-    left: 20px;
-    top: 616px;
-  }
-  p {
-    left: 60px;
-    top: 559px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 624px;
-  }
-  span {
-    top: 661px;
-    left: 60px;
-  }
-}
-.item-4 {
-  .icon {
-    left: 20px;
-    top: 676.2px;
-  }
-  p {
-    left: 60px;
-    top: 679px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 684.5px;
-  }
-  span {
-    top: 721px;
-    left: 60px;
-  }
-}
-.item-5 {
-  .icon {
-    left: 20px;
-    top: 736px;
-  }
-  p {
-    left: 60px;
-    top: 742px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 744.5px;
-  }
-  span {
-    top: 781px;
-    left: 60px;
-  }
-}
-.item-6 {
-  .icon {
-    left: 20px;
-    top: 796px;
-  }
-  p {
-    left: 60px;
-    top: 799px;
-  }
-  .arrow {
-    left: 338.6px;
-    top: 804.5px;
-  }
 }

@@ -1,7 +1,6 @@
 @import './variables.scss';
 
 @mixin main-text {
-  position: absolute;
   font: {
     family: $main-font;
     weight: normal;
@@ -29,7 +28,7 @@
   margin: 0;
 }
 @mixin arrow {
-  position: absolute;
+  // position: absolute;
   height: 14px;
   width: 14px;
   color: $white;
