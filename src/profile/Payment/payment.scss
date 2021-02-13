@@ -2,9 +2,6 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-// .__payment {
-//   height: 144px;
-// }
 .content__payment {
   height: 670px;
   position: absolute;
@@ -42,12 +39,12 @@
   }
 }
 .div-card__payment-first {
-  // background: url('~@/profile/AddNewCard/images/emptyRec.png');
   margin-left: 20px;
   margin-right: 20px;
   width: 260px;
   height: 410px;
   border-radius: 21px;
+  z-index: 10;
   &:hover {
     cursor: pointer;
   }

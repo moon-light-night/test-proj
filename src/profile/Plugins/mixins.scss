@@ -28,7 +28,6 @@
   margin: 0;
 }
 @mixin arrow {
-  // position: absolute;
   height: 14px;
   width: 14px;
   color: $white;
@@ -55,9 +54,6 @@
   font-family: $main-font;
   font-size: 24px;
   transform: rotate(-90deg);
-  // height: min-content;
-  // width: min-content;
   letter-spacing: 5px;
   margin: 0;
-  // position: sticky;
 }

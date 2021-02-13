@@ -6,121 +6,139 @@
         class="div-card__payment-first"
         id="fir"
         v-if="passInfoAboutNewCard !== null"
-        @click="$router.push('/card-info'), getId()"
+        @click="getId(), $router.push('/card-info')"
       >
         <img
+          id="fir"
           class="card__payment"
           src="@/profile/AddNewCard/images/emptyRec.png"
         />
         <img
+          id="fir"
           class="card__payment-chip"
           src="@/profile/AddNewCard/images/chip.svg"
         />
         <img
+          id="fir"
           class="card__payment-wifi"
           src="@/profile/AddNewCard/images/wifi.svg"
         />
         <img
+          id="fir"
           src="@/profile/AddNewCard/images/mc_vrt_rev1.svg"
           class="logo__payment"
           v-if="passInfoAboutNewCard[0] === 'Master card'"
         />
         <img
+          id="fir"
           src="@/profile/AddNewCard/images/Visa.svg"
           class="logo__payment"
           v-if="passInfoAboutNewCard[0] === 'Visa'"
         />
         <img
+          id="fir"
           src="@/profile/AddNewCard/images/mir.svg"
           class="logo__payment"
           v-if="passInfoAboutNewCard[0] === 'МИР'"
         />
 
-        <h5>{{ passInfoAboutNewCard[1] }}</h5>
-        <h4>{{ passInfoAboutNewCard[0] }}</h4>
-        <h3>{{ passInfoAboutNewCard[4] }}</h3>
+        <h5 id="fir">{{ passInfoAboutNewCard[1] }}</h5>
+        <h4 id="fir">{{ passInfoAboutNewCard[0] }}</h4>
+        <h3 id="fir">{{ passInfoAboutNewCard[4] }}</h3>
       </div>
 
       <!-- ---------------------------------------------------------------- -->
 
       <div
         class="div-card__payment-first"
-        id="fir"
+        id="sec"
         v-if="returnInfoSecond !== null"
         @click="$router.push('/card-info'), getId()"
       >
         <img
+          id="sec"
           class="card__payment"
           src="@/profile/AddNewCard/images/emptyRec.png"
         />
         <img
+          id="sec"
           class="card__payment-chip"
           src="@/profile/AddNewCard/images/chip.svg"
         />
         <img
+          id="sec"
           class="card__payment-wifi"
           src="@/profile/AddNewCard/images/wifi.svg"
         />
         <img
+          id="sec"
           src="@/profile/AddNewCard/images/mc_vrt_rev1.svg"
           class="logo__payment"
           v-if="returnInfoSecond[0] === 'Master card'"
         />
         <img
+          id="sec"
           src="@/profile/AddNewCard/images/Visa.svg"
           class="logo__payment"
           v-if="returnInfoSecond[0] === 'Visa'"
         />
         <img
+          id="sec"
           src="@/profile/AddNewCard/images/mir.svg"
           class="logo__payment"
           v-if="returnInfoSecond[0] === 'МИР'"
         />
 
-        <h5>{{ returnInfoSecond[1] }}</h5>
-        <h4>{{ returnInfoSecond[0] }}</h4>
-        <h3>{{ returnInfoSecond[4] }}</h3>
+        <h5 id="sec">{{ returnInfoSecond[1] }}</h5>
+        <h4 id="sec">{{ returnInfoSecond[0] }}</h4>
+        <h3 id="sec">{{ returnInfoSecond[4] }}</h3>
       </div>
 
       <!-- ---------------------------------------------------------------- -->
 
       <div
         class="div-card__payment-first"
-        id="fir"
+        id="th"
         v-if="returnInfoThird !== null"
         @click="$router.push('/card-info'), getId()"
       >
         <img
+          id="th"
           class="card__payment"
           src="@/profile/AddNewCard/images/emptyRec.png"
         />
         <img
+          id="th"
           class="card__payment-chip"
           src="@/profile/AddNewCard/images/chip.svg"
         />
         <img
+          id="th"
           class="card__payment-wifi"
           src="@/profile/AddNewCard/images/wifi.svg"
         />
         <img
+          id="th"
           src="@/profile/AddNewCard/images/mc_vrt_rev1.svg"
           class="logo__payment"
           v-if="returnInfoThird[0] === 'Master card'"
         />
         <img
+          id="th"
           src="@/profile/AddNewCard/images/Visa.svg"
           class="logo__payment"
           v-if="returnInfoThird[0] === 'Visa'"
         />
         <img
+          id="th"
           src="@/profile/AddNewCard/images/mir.svg"
           class="logo__payment"
           v-if="returnInfoThird[0] === 'МИР'"
         />
 
-        <h5>{{ returnInfoThird[1] }}</h5>
-        <h4>{{ returnInfoThird[0] }}</h4>
-        <h3>{{ returnInfoThird[4] }}</h3>
+        <h5 id="th">{{ returnInfoThird[1] }}</h5>
+        <h4 id="th">{{ returnInfoThird[0] }}</h4>
+        <h3 id="th">{{ returnInfoThird[4] }}</h3>
       </div>
     </div>
     <!-- ---------------------------------------------------------------- -->

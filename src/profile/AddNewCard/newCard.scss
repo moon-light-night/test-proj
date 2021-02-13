@@ -2,16 +2,19 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-.main-back {
+.content__newCard {
+  height: 600px;
   position: absolute;
-  width: $width-content;
-  height: 811.8px;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   background: $newBackgroundColor;
+  z-index: -10;
 }
 .field {
   position: absolute;
-  top: 510px;
+  top: 412px;
   left: 20px;
   height: 50px;
   width: 335px;
@@ -68,7 +71,7 @@
   border-radius: 5px;
   width: 335px;
   height: 50px;
-  top: 614px;
+  top: 516px;
   left: 20px;
   border: none;
   cursor: pointer;
@@ -90,31 +93,31 @@
 .logo {
   position: absolute;
   z-index: 500;
-  top: 423px;
-  right: 47px;
+  top: 325px;
+  right: 60px;
 }
 .logo-cb {
   position: absolute;
   z-index: 500;
-  top: 280px;
+  top: 182px;
   left: 40px;
 }
 .logo-bank {
   position: absolute;
   z-index: 500;
-  top: 285px;
+  top: 187px;
   left: 106px;
 }
 .logo-line {
   position: absolute;
   z-index: 500;
-  top: 285px;
+  top: 187px;
   left: 94px;
 }
 
 .nameCard {
   position: absolute;
-  top: 270px;
+  top: 172px;
   left: 40px;
   font-family: $main-font;
   font-style: normal;
@@ -126,26 +129,26 @@
   z-index: 10;
 }
 .card-position {
-  position: absolute;
-  top: 258px;
+  position: relative;
+  top: 160px;
   left: 20px;
   z-index: 1;
 }
 .card-wifi {
   position: absolute;
-  top: 339px;
+  top: 241px;
   left: 318px;
   z-index: 10;
 }
 .card-chip {
   position: absolute;
-  top: 332px;
+  top: 234px;
   left: 40px;
   z-index: 10;
 }
 .mmyy {
   position: absolute;
-  top: 416px;
+  top: 318px;
   left: 40px;
   font-family: $main-font;
   font-style: normal;
@@ -158,7 +161,7 @@
 }
 .card-stars {
   position: absolute;
-  top: 385px;
+  top: 287px;
   left: 38px;
   z-index: 10;
 }
@@ -174,25 +177,25 @@
 
 .blackStripe {
   position: absolute;
-  top: 288px;
+  top: 190px;
   left: 20px;
   z-index: 10;
 }
 .whiteStripe {
   position: absolute;
-  top: 360px;
+  top: 262px;
   left: 37px;
   z-index: 10;
 }
 .recSVG {
   position: absolute;
-  top: 372px;
+  top: 274px;
   left: 276px;
   z-index: 10;
 }
 .firSecName {
   position: absolute;
-  top: 427px;
+  top: 329px;
   left: 37px;
   font-family: $main-font;
   font-style: normal;
@@ -205,7 +208,7 @@
 }
 .recSVG-text {
   position: absolute;
-  top: 370px;
+  top: 272px;
   left: 283px;
   font-family: SF Pro Text;
   font-style: normal;
@@ -218,7 +221,7 @@
 }
 .nameCardWithName {
   position: absolute;
-  top: 290px !important;
+  top: 192px !important;
   left: 40px;
   font-family: $main-font;
   font-style: normal;
@@ -228,4 +231,84 @@
   letter-spacing: 0.15px;
   color: white;
   z-index: 10;
+}
+.main-layout {
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*------------------------------------*/
+@media (max-width: 410px) {
+  .card-position {
+    width: 81vw !important;
+  }
+  .card-wifi {
+    width: 3vw;
+    left: 80vw;
+  }
+  .card-chip {
+    width: 10vw;
+  }
+  .mmyy {
+    font-size: 3vw;
+    margin-top: -6vw;
+  }
+  .mmyy-media {
+    margin-top: -10vw !important;
+    top: 95vw;
+  }
+  .card-stars {
+    width: 41vw !important;
+  }
+  .card-stars__num {
+    width: 81vw !important;
+    top: 77vw;
+    font-size: 4vw;
+  }
+  .nameCard {
+    width: 81vw !important;
+    font-size: 80%;
+  }
+  .btn-continue {
+    width: 81vw !important;
+  }
+  .field {
+    width: 81vw !important;
+  }
+  .logo {
+    left: 66vw;
+    top: 80vw;
+    width: 16vw;
+  }
+  .card-stars__num-top {
+    margin-top: -6vw;
+    font-size: 3vw;
+  }
+  #cardNum {
+    font-size: 14px;
+  }
+  .btn-payment {
+    font-size: 14px;
+  }
+  .blackStripe {
+    width: 80.6vw;
+  }
+  .whiteStripe {
+    width: 72vw;
+  }
+  .recSVG {
+    width: 10vw;
+    left: 70vw;
+  }
+  .recSVG-text {
+    font-size: 3.7vw;
+    left: 72vw;
+  }
+  .firSecName {
+    font-size: 3vw;
+    top: 300px;
+  }
 }
