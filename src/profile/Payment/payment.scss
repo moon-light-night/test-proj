@@ -2,17 +2,18 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-.__payment {
-  height: 144px;
-}
+// .__payment {
+//   height: 144px;
+// }
 .content__payment {
+  height: 670px;
   position: absolute;
-  height: 978px;
-  width: $width-content;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   background: $newBackgroundColor;
-  z-index: -200;
+  z-index: -10;
 }
 .footer__payment {
   position: absolute;
@@ -21,23 +22,93 @@
   width: $width-content;
   z-index: 300;
 }
-.btn__payment {
-  width: 335px;
+.btn-payment {
+  background-color: white;
+  color: rgba(2, 2, 102, 1);
+  font-family: $main-font;
+  font-size: $fsz__payment;
   height: 50px;
   position: absolute;
-  border-radius: 5px;
-  top: 721px;
-  left: 20px;
-}
-.card__payment {
-  padding-top: 250px;
+  border-radius: 7px;
+  top: 590px;
+  left: 60px;
+  right: 60px;
+  div {
+    display: table;
+    margin: 14px auto;
+  }
   &:hover {
     cursor: pointer;
   }
 }
-#fir {
-  padding-left: 50px;
+.div-card__payment-first {
+  // background: url('~@/profile/AddNewCard/images/emptyRec.png');
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 260px;
+  height: 410px;
+  border-radius: 21px;
+  &:hover {
+    cursor: pointer;
+  }
+  h4 {
+    @include payment-h4;
+    position: relative;
+    top: -270px;
+    left: -70px;
+    width: 250px;
+    height: 40px;
+  }
+  h3 {
+    @include payment-h4;
+    position: relative;
+    top: -360px;
+    left: 35px;
+    width: 380px;
+    height: 40px;
+  }
+  h5 {
+    @include payment-h4;
+    position: relative;
+    top: -250px;
+    font-size: 20px !important;
+    left: 28px;
+    width: 305px;
+    height: 30px;
+  }
+  .card__payment-wifi {
+    position: relative;
+    top: -400px;
+    left: 68px;
+    transform: rotate(-90deg);
+  }
+  .card__payment-chip {
+    position: relative;
+    top: -120px;
+    left: 100px;
+    transform: rotate(-90deg);
+  }
+  .logo__payment {
+    position: relative;
+    top: -390px;
+    left: 110px;
+    transform: rotate(-90deg);
+  }
 }
+.div-card__payment-second {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.card__payment {
+  width: 260px;
+  height: 410px;
+  border-radius: 21px;
+  position: static;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .addCard__payment {
   @include text__payment;
   width: 335px;
@@ -55,9 +126,17 @@
   }
 }
 .overFlow {
-  width: 375px;
-  overflow: auto;
+  padding-top: 110px;
+  width: 90%;
+  overflow: visible auto;
+  overflow-y: hidden;
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.center {
+  display: flex;
+  justify-content: center !important;
 }
 .secondCard {
   width: 260px;

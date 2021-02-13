@@ -50,3 +50,14 @@
   letter-spacing: -0.24px;
   color: #020266;
 }
+@mixin payment-h4 {
+  color: white;
+  font-family: $main-font;
+  font-size: 24px;
+  transform: rotate(-90deg);
+  // height: min-content;
+  // width: min-content;
+  letter-spacing: 5px;
+  margin: 0;
+  // position: sticky;
+}

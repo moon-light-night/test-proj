@@ -43,7 +43,7 @@
           !$v.cardfsname.maxLength,
       }"
       class="btn-continue"
-      @click="passCardfsname(), $router.push('/payment'), addCard()"
+      @click="passCardfsname(), $router.push('/payment')"
     >
       Сохранить
     </button>
@@ -82,7 +82,6 @@ export default {
         this.$store.dispatch('actionCardfsnameThird', this.cardfsname)
       }
     },
-    addCard() {},
   },
 }
 </script>
