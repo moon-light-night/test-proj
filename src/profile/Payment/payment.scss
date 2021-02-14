@@ -12,13 +12,13 @@
   background: $newBackgroundColor;
   z-index: -10;
 }
-.footer__payment {
-  position: absolute;
-  top: 901px;
-  left: 0;
-  width: $width-content;
-  z-index: 300;
-}
+// .footer__payment {
+//   position: absolute;
+//   top: 901px;
+//   left: 0;
+//   width: $width-content;
+//   z-index: 300;
+// }
 .btn-payment {
   background-color: white;
   color: rgba(2, 2, 102, 1);

@@ -29,13 +29,19 @@
       </fieldset>
       <button
         :disabled="
-          !$v.cardcvv.required || !$v.cardcvv.minLength || !$v.cardcvv.maxLength
+          !$v.cardcvv.required ||
+            !$v.cardcvv.minLength ||
+            !$v.cardcvv.maxLength ||
+            !$v.cardcvv.numeric ||
+            this.regxSpace
         "
         :class="{
           invalid:
             !$v.cardcvv.required ||
             !$v.cardcvv.minLength ||
-            !$v.cardcvv.maxLength,
+            !$v.cardcvv.maxLength ||
+            !$v.cardcvv.numeric ||
+            this.regxSpace,
         }"
         class="btn-continue"
         @click="passCardcvv(), $router.push('/new-card-fsname')"
@@ -47,14 +53,31 @@
 </template>
 
 <script>
-import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import {
+  required,
+  minLength,
+  maxLength,
+  numeric,
+} from 'vuelidate/lib/validators'
 import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardcvv: '',
+    findSpace: / /m,
+    regxSpace: null,
   }),
+  updated() {
+    if (this.cardcvv.length === 3) {
+      this.regxSpace = this.findSpace.test(this.cardcvv)
+    }
+  },
   validations: {
-    cardcvv: { required, minLength: minLength(3), maxLength: maxLength(3) },
+    cardcvv: {
+      required,
+      minLength: minLength(3),
+      maxLength: maxLength(3),
+      numeric,
+    },
   },
   computed: mapGetters([
     'returnCardNum',

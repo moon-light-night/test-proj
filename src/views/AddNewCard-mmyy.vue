@@ -29,13 +29,19 @@
         :disabled="
           !$v.cardmmyy.required ||
             !$v.cardmmyy.minLength ||
-            !$v.cardmmyy.maxLength
+            !$v.cardmmyy.maxLength ||
+            !this.regxSlesh ||
+            this.regxSpace ||
+            this.regxLetter
         "
         :class="{
           invalid:
             !$v.cardmmyy.required ||
             !$v.cardmmyy.minLength ||
-            !$v.cardmmyy.maxLength,
+            !$v.cardmmyy.maxLength ||
+            !this.regxSlesh ||
+            this.regxSpace ||
+            this.regxLetter,
         }"
         class="btn-continue"
         @click="passCardmmyy(), $router.push('/new-card-cvv')"
@@ -111,9 +117,33 @@ import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardmmyy: '',
+    findLetter: /[a-z]/im,
+    findSlesh: /[\/]/m,
+    findSpace: / /m,
+    regxLetter: null,
+    regxSlesh: null,
+    regxSpace: null,
   }),
   validations: {
-    cardmmyy: { required, minLength: minLength(5), maxLength: maxLength(5) },
+    cardmmyy: {
+      required,
+      minLength: minLength(5),
+      maxLength: maxLength(5),
+    },
+  },
+  updated() {
+    let regVar = document
+      .querySelector('#cardmmyy')
+      .value.replace(/[^\dA-Z]/g, '')
+      .replace(/(.{2})/g, '$1/')
+      .trim()
+      .substr(0, 5)
+    document.querySelector('#cardmmyy').value = regVar
+    if (this.cardmmyy.length === 5) {
+      this.regxSpace = this.findSpace.test(this.cardmmyy)
+      this.regxSlesh = this.findSlesh.test(this.cardmmyy)
+      this.regxLetter = this.findLetter.test(this.cardmmyy)
+    }
   },
   computed: mapGetters([
     'returnCardNum',

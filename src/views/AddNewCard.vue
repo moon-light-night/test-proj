@@ -35,13 +35,15 @@
         :disabled="
           !$v.cardField.required ||
             !$v.cardField.minLength ||
-            !$v.cardField.maxLength
+            !$v.cardField.maxLength ||
+            $v.cardField.numeric
         "
         :class="{
           invalid:
             !$v.cardField.required ||
             !$v.cardField.minLength ||
-            !$v.cardField.maxLength,
+            !$v.cardField.maxLength ||
+            $v.cardField.numeric,
         }"
         class="btn-continue"
         @click="passCardName(), $router.push('/new-card-num')"
@@ -101,15 +103,34 @@
 </template>
 
 <script>
-import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import {
+  required,
+  minLength,
+  maxLength,
+  numeric,
+} from 'vuelidate/lib/validators'
 import { mapGetters } from 'vuex'
+// const findSymbol = /. /gm.test(cardField)
+// console.log(findSymbol)
 export default {
   data: () => ({
     cardField: '',
+    // findSymbol: /\s+/gm,
+    // regex: null,
   }),
   validations: {
-    cardField: { required, minLength: minLength(3), maxLength: maxLength(19) },
+    cardField: {
+      required,
+      numeric,
+      minLength: minLength(3),
+      maxLength: maxLength(19),
+    },
   },
+  // updated() {
+  //   // console.log(this.findSymbol.test(this.cardField))
+  //   this.regex = this.cardField.match(this.findSymbol)
+  //   console.log(this.regex)
+  // },
   computed: mapGetters([
     'passInfoAboutNewCard',
     'returnLink',

@@ -33,13 +33,17 @@
         :disabled="
           !$v.cardfsname.required ||
             !$v.cardfsname.minLength ||
-            !$v.cardfsname.maxLength
+            !$v.cardfsname.maxLength ||
+            this.regxNum ||
+            !this.regxSpace
         "
         :class="{
           invalid:
             !$v.cardfsname.required ||
             !$v.cardfsname.minLength ||
-            !$v.cardfsname.maxLength,
+            !$v.cardfsname.maxLength ||
+            this.regxNum ||
+            !this.regxSpace,
         }"
         class="btn-continue"
         @click="passCardfsname(), $router.push('/payment')"
@@ -56,9 +60,17 @@ import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardfsname: '',
+    findSpace: / /m,
+    findNum: /[0-9]/m,
+    regxSpace: null,
+    regxNum: null,
   }),
   validations: {
-    cardfsname: { required, minLength: minLength(5), maxLength: maxLength(29) },
+    cardfsname: {
+      required,
+      minLength: minLength(5),
+      maxLength: maxLength(29),
+    },
   },
   computed: mapGetters([
     'returnCardcvv',
@@ -68,6 +80,12 @@ export default {
     'returnInfoThird',
     'returnCardcvvThird',
   ]),
+  updated() {
+    // if (this.cardfsname.length === 5) {
+    this.regxSpace = this.findSpace.test(this.cardfsname)
+    this.regxNum = this.findNum.test(this.cardfsname)
+    // }
+  },
   methods: {
     passCardfsname() {
       if (this.passInfoAboutNewCard === null) {

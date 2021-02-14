@@ -27,13 +27,17 @@
       </fieldset>
       <button
         :disabled="
-          !$v.cardNum.required || !$v.cardNum.minLength || !$v.cardNum.maxLength
+          !$v.cardNum.required ||
+            !$v.cardNum.minLength ||
+            !$v.cardNum.maxLength ||
+            this.regxLetter
         "
         :class="{
           invalid:
             !$v.cardNum.required ||
             !$v.cardNum.minLength ||
-            !$v.cardNum.maxLength,
+            !$v.cardNum.maxLength ||
+            this.regxLetter,
         }"
         class="btn-continue"
         @click="passCardNum(), $router.push('/new-card-mmyy')"
@@ -109,9 +113,27 @@ import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     cardNum: '',
+    findSymbol: /\s+/gm,
+    findLetter: /[a-z]/gim,
+    regxLetter: null,
   }),
   validations: {
-    cardNum: { required, minLength: minLength(19), maxLength: maxLength(19) },
+    cardNum: {
+      required,
+      minLength: minLength(19),
+      maxLength: maxLength(19),
+    },
+  },
+  updated() {
+    let regVar = document
+      .querySelector('#cardNum')
+      .value.replace(/[^\dA-Z]/g, '')
+      .replace(/(.{4})/g, '$1 ')
+      .trim()
+    document.querySelector('#cardNum').value = regVar
+    if (this.cardNum.length === 19) {
+      this.regxLetter = this.findLetter.test(this.cardNum)
+    }
   },
   computed: mapGetters([
     'returnCardName',
