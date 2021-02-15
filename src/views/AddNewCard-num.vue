@@ -2,24 +2,35 @@
   <div>
     <div class="content__newCard"></div>
     <div class="main-layout">
-      <p class="nameCardWithName">
+      <p class="content__nameCard__field">
         {{ returnCardNameThird || returnCardNameSecond || returnCardName }}
       </p>
       <img
-        class="card-position"
+        class="content__nameCard-position"
         src="@/profile/AddNewCard/images/Rectangle14.png"
       />
-      <img class="card-wifi" src="@/profile/AddNewCard/images/wifi.svg" />
-      <img class="card-chip" src="@/profile/AddNewCard/images/chip.svg" />
-      <p class="card-stars card-stars__num card-stars__num-top">
+      <img
+        class="content__nameCard__wifi"
+        src="@/profile/AddNewCard/images/wifi.svg"
+      />
+      <img
+        class="content__nameCard__chip"
+        src="@/profile/AddNewCard/images/chip.svg"
+      />
+      <p
+        class="content__nameCard__stars 
+      content__nameCard__stars__num 
+      content__nameCard__stars__num-top"
+      >
         {{ cardNum }}
       </p>
-      <p class="mmyy">мм / yy</p>
-      <fieldset class="field">
-        <legend>Номер карты</legend>
+      <p class="content__nameCard__mmyy">мм / yy</p>
+      <fieldset class="content__nameCard__field__input-outside">
+        <legend class="content__nameCard__field__legend">Номер карты</legend>
         <input
           type="text"
           id="cardNum"
+          class="content__nameCard__field__input-inside"
           v-model="cardNum"
           placeholder="Например 1234 1234 1234 1234"
           maxlength="19"
@@ -39,7 +50,7 @@
             !$v.cardNum.maxLength ||
             this.regxLetter,
         }"
-        class="btn-continue"
+        class="content__nameCard__field__btn-continue"
         @click="passCardNum(), $router.push('/new-card-mmyy')"
       >
         Продолжить
@@ -47,7 +58,7 @@
       <img
         src="@/profile/AddNewCard/images/mc_vrt_rev1.svg"
         alt="img"
-        class="logo"
+        class="content__nameCard__logo"
         v-if="
           (returnCardName === 'Master card' &&
             returnCardNameSecond === '' &&
@@ -63,7 +74,7 @@
       <img
         src="@/profile/AddNewCard/images/mir.svg"
         alt="img"
-        class="logo"
+        class="content__nameCard__logo"
         v-if="
           (returnCardName === 'МИР' &&
             returnCardNameSecond === '' &&
@@ -79,7 +90,7 @@
       <img
         src="@/profile/AddNewCard/images/Visa.svg"
         alt="img"
-        class="logo"
+        class="content__nameCard__logo"
         v-if="
           (returnCardName === 'Visa' &&
             returnCardNameSecond === '' &&
@@ -92,16 +103,20 @@
               (returnCardNameSecond === 'МИР' || 'Master card'))
         "
       />
-      <img src="@/profile/AddNewCard/images/CB.svg" alt="img" class="logo-cb" />
+      <img
+        src="@/profile/AddNewCard/images/CB.svg"
+        alt="img"
+        class="content__nameCard__logo-cb"
+      />
       <img
         src="@/profile/AddNewCard/images/UniversalBank.svg"
         alt="img"
-        class="logo-bank"
+        class="content__nameCard__logo-bank"
       />
       <img
         src="@/profile/AddNewCard/images/Line2.svg"
         alt="img"
-        class="logo-line"
+        class="content__nameCard__logo-line"
       />
     </div>
   </div>

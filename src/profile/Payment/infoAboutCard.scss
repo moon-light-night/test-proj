@@ -2,7 +2,7 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-.cardInfo {
+.content__newCard-info {
   height: 700px !important;
 }
 .card-info__first {
@@ -14,19 +14,19 @@
   height: 330px;
   top: 250px;
 }
-.card-info__sec {
+.content__newCard-infoSecond {
   position: absolute;
   top: 152px;
   left: 20px;
   z-index: 100;
 }
-.card-info-backside__sec {
+.content__newCard-infoSecondBackside {
   position: absolute;
   z-index: 100;
   top: 372px;
   left: 20px;
 }
-.secondCardPosition {
+.content__newCard__secondCardPosition {
   position: absolute;
   top: 620px;
   @include text__payment;
@@ -38,13 +38,13 @@
   border: none;
   cursor: pointer;
 }
-.logo__info {
+.content__newCard__logoInfo {
   position: absolute;
   top: 302px;
   left: 250px;
   z-index: 100;
 }
-.mmyy__info {
+.content__newCard__mmyyInfo {
   position: absolute;
   top: 307px;
   left: 40px;
@@ -57,7 +57,7 @@
   letter-spacing: 0.15px;
   color: white;
 }
-.num__info {
+.content__newCard__numInfo {
   position: absolute;
   top: 282px;
   left: 40px;
@@ -82,40 +82,43 @@
 .white {
   top: 482px !important;
 }
-.recSVG-info {
+.content__newCard__recSVG-info {
   top: 494px !important;
 }
-.recSVG-text-info {
+.content__newCard__recSVG__text-info {
   top: 491px !important;
 }
-.firSecName-info {
+.content__newCard__full-info {
   top: 542px !important;
 }
 
 @media (max-width: 390px) {
-  .logo__info {
+  .content__newCard__logoInfo {
     width: 14vw;
     left: 65vw;
     top: 80vw;
   }
-  .card-info__sec {
+  .content__newCard-infoSecond {
     width: 81vw !important;
   }
-  .num__info {
+  .content__newCard__whiteStripe-infoSecondBackside {
+    width: 74vw !important;
+  }
+  .content__newCard__numInfo {
     font-size: 4vw;
     top: 79vw;
   }
-  .mmyy__info {
+  .content__newCard__mmyyInfo {
     font-size: 3vw;
     top: 83vw;
   }
-  .card-info-backside__sec {
+  .content__newCard-infoSecondBackside {
     width: 81vw !important;
   }
-  .firSecName-info {
+  .content__newCard__full-info {
     top: 142vw !important;
   }
-  .secondCardPosition {
+  .content__newCard__secondCardPosition {
     width: 80vw;
   }
 }

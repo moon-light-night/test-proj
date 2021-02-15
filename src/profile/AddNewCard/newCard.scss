@@ -12,7 +12,7 @@
   background: $newBackgroundColor;
   z-index: -10;
 }
-.field {
+.content__nameCard__field__input-outside {
   position: absolute;
   top: 412px;
   left: 20px;
@@ -23,7 +23,7 @@
   border-radius: 5px;
   border-color: rgba(95, 205, 188, 1);
   box-shadow: 0px 2px 8px rgba(88, 255, 255, 0.4);
-  input {
+  .content__nameCard__field__input-inside {
     color: $white;
     font-family: $main-font;
     font-style: normal;
@@ -41,7 +41,7 @@
       outline: none !important;
     }
   }
-  legend {
+  .content__nameCard__field__legend {
     color: $white;
     font-size: 12px;
     font-family: $main-font;
@@ -50,22 +50,7 @@
     margin-left: 22px;
   }
 }
-.rectangle__newcard {
-  width: 335px;
-  height: 50px;
-  position: absolute;
-  border-radius: 5px;
-  top: 614px;
-  left: 20px;
-}
-.continue {
-  @include text__payment;
-  width: 335px;
-  left: 20px;
-  top: 625px;
-  margin: 0;
-}
-.btn-continue {
+.content__nameCard__field__btn-continue {
   @include text__payment;
   position: absolute;
   border-radius: 5px;
@@ -82,40 +67,32 @@
   border: 1px solid rgb(49, 49, 49);
   cursor: not-allowed;
 }
-.invalid-input {
-}
-.footer__newcard {
-  position: absolute;
-  top: 101%;
-  left: 0;
-  z-index: 1000;
-}
-.logo {
+.content__nameCard__logo {
   position: absolute;
   z-index: 500;
   top: 325px;
   right: 60px;
 }
-.logo-cb {
+.content__nameCard__logo-cb {
   position: absolute;
   z-index: 500;
   top: 182px;
   left: 40px;
 }
-.logo-bank {
+.content__nameCard__logo-bank {
   position: absolute;
   z-index: 500;
   top: 187px;
   left: 106px;
 }
-.logo-line {
+.content__nameCard__logo-line {
   position: absolute;
   z-index: 500;
   top: 187px;
   left: 94px;
 }
 
-.nameCard {
+.content__nameCard {
   position: absolute;
   top: 172px;
   left: 40px;
@@ -128,25 +105,25 @@
   color: white;
   z-index: 10;
 }
-.card-position {
+.content__nameCard-position {
   position: relative;
   top: 160px;
   left: 20px;
   z-index: 1;
 }
-.card-wifi {
+.content__nameCard__wifi {
   position: absolute;
   top: 241px;
   left: 318px;
   z-index: 10;
 }
-.card-chip {
+.content__nameCard__chip {
   position: absolute;
   top: 234px;
   left: 40px;
   z-index: 10;
 }
-.mmyy {
+.content__nameCard__mmyy {
   position: absolute;
   top: 318px;
   left: 40px;
@@ -159,13 +136,13 @@
   color: white;
   z-index: 10;
 }
-.card-stars {
+.content__nameCard__stars {
   position: absolute;
   top: 287px;
   left: 38px;
   z-index: 10;
 }
-.card-stars__num {
+.content__nameCard__stars__num {
   font-family: $main-font;
   font-style: normal;
   font-weight: normal;
@@ -175,25 +152,25 @@
   color: white;
 }
 
-.blackStripe {
+.content__nameCard__blackStripe {
   position: absolute;
   top: 190px;
   left: 20px;
   z-index: 10;
 }
-.whiteStripe {
+.content__nameCard__whiteStripe {
   position: absolute;
   top: 262px;
   left: 37px;
   z-index: 10;
 }
-.recSVG {
+.content__nameCard__recSVG {
   position: absolute;
   top: 274px;
   left: 276px;
   z-index: 10;
 }
-.firSecName {
+.content__nameCard__fullName {
   position: absolute;
   top: 329px;
   left: 37px;
@@ -206,7 +183,7 @@
   z-index: 10;
   margin: 0;
 }
-.recSVG-text {
+.content__nameCard__recSVG-text {
   position: absolute;
   top: 272px;
   left: 283px;
@@ -219,7 +196,7 @@
   z-index: 10;
   margin: 0;
 }
-.nameCardWithName {
+.content__nameCard__field {
   position: absolute;
   top: 192px !important;
   left: 40px;
@@ -242,48 +219,48 @@
 
 /*------------------------------------*/
 @media (max-width: 410px) {
-  .card-position {
+  .content__nameCard-position {
     width: 81vw !important;
   }
-  .card-wifi {
+  .content__nameCard__wifi {
     width: 3vw;
     left: 80vw;
   }
-  .card-chip {
+  .content__nameCard__chip {
     width: 10vw;
   }
-  .mmyy {
+  .content__nameCard__mmyy {
     font-size: 3vw;
     margin-top: -6vw;
   }
-  .mmyy-media {
+  .content__nameCard__mmyy-media {
     margin-top: -10vw !important;
     top: 95vw;
   }
-  .card-stars {
+  .content__nameCard__stars {
     width: 41vw !important;
   }
-  .card-stars__num {
+  .content__nameCard__stars__num {
     width: 81vw !important;
     top: 77vw;
     font-size: 4vw;
   }
-  .nameCard {
+  .content__nameCard {
     width: 81vw !important;
     font-size: 80%;
   }
-  .btn-continue {
+  .content__nameCard__field__btn-continue {
     width: 81vw !important;
   }
-  .field {
+  .content__nameCard__field__input-outside {
     width: 81vw !important;
   }
-  .logo {
+  .content__nameCard__logo {
     left: 66vw;
     top: 80vw;
     width: 16vw;
   }
-  .card-stars__num-top {
+  .content__nameCard__stars__num-top {
     margin-top: -6vw;
     font-size: 3vw;
   }
@@ -299,15 +276,15 @@
   .whiteStripe {
     width: 72vw;
   }
-  .recSVG {
+  .content__nameCard__recSVG {
     width: 10vw;
     left: 70vw;
   }
-  .recSVG-text {
+  .content__nameCard__recSVG-text {
     font-size: 3.7vw;
     left: 72vw;
   }
-  .firSecName {
+  .content__nameCard__fullName {
     font-size: 3vw;
     top: 300px;
   }

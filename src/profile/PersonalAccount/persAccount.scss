@@ -2,32 +2,23 @@
 @import '../Plugins/mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-a {
-  text-decoration: none;
-  color: white;
-  &:hover {
-    cursor: pointer;
-  }
-}
-ul {
+.content__list {
   padding-left: 0;
-  li {
+  .content__list__item {
     list-style-type: none;
     padding-bottom: 5px;
   }
-}
-// .emty-field {
-//   height: 72px;
-//   background: rgba(196, 196, 196, 0.57);
-// }
-.avatar {
-  margin-top: 150px;
-  text-align: center;
-  img {
-    width: 250px;
+  .content__list__item-avatar {
+    list-style-type: none;
+    padding-bottom: 5px;
+    margin-top: 150px;
+    text-align: center;
+    .content__list__item-img {
+      width: 250px;
+    }
   }
 }
-.user-name-text {
+.content__list__item-user {
   @include main-text;
   line-height: 20px;
   font-size: 18px !important;
@@ -37,7 +28,7 @@ ul {
   text-align: center;
   margin: 0;
 }
-.phone-number {
+.content__list__item-phoneNumber {
   @include main-text;
   left: 131px;
   font-size: 18px !important;
@@ -46,64 +37,74 @@ ul {
   text-align: center;
   margin: 0;
 }
-.personal-info {
+.content__list__item__personalInfo {
   @include main-text;
   display: flex;
   justify-content: center;
-  margin-top: 48px;
+  margin-top: 18px;
   li {
-    .svg {
+    list-style-type: none;
+    .content__list__item__personalInfo-svg {
       position: absolute;
       left: 14px;
       padding-top: 3px;
       width: 40px;
-    }
-    p {
-      position: absolute;
-      left: 60px;
-      font-size: 14px !important;
-      width: max-content;
-    }
-    .arrow {
-      padding-top: 18px;
-      padding-left: 90vw;
-      padding-bottom: 16px;
       &:hover {
         cursor: pointer;
       }
     }
-    .line {
+    .content__list__item__personalInfo-row {
       position: absolute;
-      top: 450px;
-      left: 2%;
-      border-top: 2px solid rgba(52, 142, 255, 0.5);
-      width: 95%;
-      margin-top: 60px;
+      left: 60px;
+      font-size: 14px !important;
+      width: max-content;
+      &:hover {
+        cursor: pointer;
+      }
     }
-    .line-list {
+    .content__list__item__personalInfo-arrow {
+      padding-top: 16px;
+      padding-left: 110vw;
+      z-index: 100;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .content__list__item__personalInfo-line {
       left: 50px;
-      border-top: 2px solid rgba(2, 40, 87, 0.5);
+      border-top: 1px solid rgba(2, 40, 87, 0.5);
       width: 88%;
       margin-top: 47px;
     }
   }
 }
-.second {
+.content__list__item__personalInfo-second {
   padding-right: 245px;
   .arrow {
     position: absolute;
     right: 40px;
   }
 }
-.mgn-btm {
+.content__list__item__personalInfo-mgn-btm {
   margin-top: 20px;
   padding-bottom: 20px;
 }
-.mgn-tp {
+.content__list__item__personalInfo-mgn-tp {
   margin-top: 80px;
 }
-
-.close-account-button {
+.cursor_logout {
+  &:hover {
+    cursor: pointer;
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.content__close-btn {
   @include arrow;
   padding-left: 10vw;
   width: 14px !important;
@@ -124,7 +125,7 @@ ul {
   height: 1070px;
   z-index: -10;
 }
-.person-layout {
+.person__layout {
   background: $person-layout-color;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -135,7 +136,7 @@ ul {
   height: 575px;
   z-index: -5;
 }
-.list-layout {
+.list__layout {
   background: $person-layout-color;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -145,22 +146,4 @@ ul {
   bottom: 0;
   height: 360px;
   z-index: -5;
-}
-.logout-icon {
-  @include svg;
-  left: 20px;
-  top: 881px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  z-index: 300;
-}
-.list {
-  background: $newBackgroundColor;
-  position: absolute;
-  height: 360px;
-  width: $width-content;
-  left: 0px;
-  top: 481px;
 }

@@ -3,25 +3,29 @@
     <div class="content__newCard"></div>
     <div class="main-layout">
       <img
-        class="card-position"
+        class="content__nameCard-position"
         src="@/profile/AddNewCard/images/Rectangle14.png"
       />
       <img
-        class="blackStripe"
+        class="content__nameCard__blackStripe"
         src="@/profile/AddNewCard/images/blackStripe.svg"
       />
       <img
-        class="whiteStripe"
+        class="content__nameCard__whiteStripe"
         src="@/profile/AddNewCard/images/whiteStripe.svg"
       />
-      <img class="recSVG" src="@/profile/AddNewCard/images/recSVG.svg" />
-      <p class="firSecName">Имя Фамилия</p>
-      <p class="recSVG-text">{{ cardcvv }}</p>
-      <fieldset class="field">
-        <legend>CVV</legend>
+      <img
+        class="content__nameCard__recSVG"
+        src="@/profile/AddNewCard/images/recSVG.svg"
+      />
+      <p class="content__nameCard__fullName">Имя Фамилия</p>
+      <p class="content__nameCard__recSVG-text">{{ cardcvv }}</p>
+      <fieldset class="content__nameCard__field__input-outside">
+        <legend class="content__nameCard__field__legend">CVV</legend>
         <input
           type="text"
           id="cardcvv"
+          class="content__nameCard__field__input-inside"
           v-model="cardcvv"
           placeholder="Например 123"
           maxlength="3"
@@ -43,7 +47,7 @@
             !$v.cardcvv.numeric ||
             this.regxSpace,
         }"
-        class="btn-continue"
+        class="content__nameCard__field__btn-continue"
         @click="passCardcvv(), $router.push('/new-card-fsname')"
       >
         Продолжить

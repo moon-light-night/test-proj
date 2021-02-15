@@ -3,27 +3,31 @@
     <div class="content__newCard"></div>
     <div class="main-layout">
       <img
-        class="card-position"
+        class="content__nameCard-position"
         src="@/profile/AddNewCard/images/Rectangle14.png"
       />
       <img
-        class="blackStripe"
+        class="content__nameCard__blackStripe"
         src="@/profile/AddNewCard/images/blackStripe.svg"
       />
       <img
-        class="whiteStripe"
+        class="content__nameCard__whiteStripe"
         src="@/profile/AddNewCard/images/whiteStripe.svg"
       />
-      <img class="recSVG" src="@/profile/AddNewCard/images/recSVG.svg" />
-      <p class="firSecName">{{ cardfsname }}</p>
-      <p class="recSVG-text">
+      <img
+        class="content__nameCard__recSVG"
+        src="@/profile/AddNewCard/images/recSVG.svg"
+      />
+      <p class="content__nameCard__fullName">{{ cardfsname }}</p>
+      <p class="content__nameCard__recSVG-text">
         {{ returnCardcvvThird || returnCardcvvSecond || returnCardcvv }}
       </p>
-      <fieldset class="field">
-        <legend>Имя Фамилия</legend>
+      <fieldset class="content__nameCard__field__input-outside">
+        <legend class="content__nameCard__field__legend">Имя Фамилия</legend>
         <input
           type="text"
           id="cardfsname"
+          class="content__nameCard__field__input-inside"
           v-model="cardfsname"
           placeholder="Например Maria Mar"
           maxlength="30"
@@ -45,7 +49,7 @@
             this.regxNum ||
             !this.regxSpace,
         }"
-        class="btn-continue"
+        class="content__nameCard__field__btn-continue"
         @click="passCardfsname(), $router.push('/payment')"
       >
         Сохранить
